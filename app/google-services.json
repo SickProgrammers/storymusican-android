@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "331000024353",
+    "project_id": "storymusican",
+    "storage_bucket": "storymusican.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331000024353:android:ac933fbbb53d0d5c4fc260",
+        "android_client_info": {
+          "package_name": "org.sickprogrammer.storymusican"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331000024353-cmdc85v2dco8qekuvaadbpcjnll3r84m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCetlyjFKhbVbr79gQbL9-tauUmRqauxT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331000024353-cmdc85v2dco8qekuvaadbpcjnll3r84m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
