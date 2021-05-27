@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">storymusican-android</string>
+    <string name="app_name">스토리 뮤지션</string>
+    <string name="app_name_english">Story Musician</string>
 </resources>
