@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.login.LoginActivity"
+    android:background="@drawable/all_brightbackground_fullsize"
+    app:layoutDescription="@xml/activity_login_scene">
+
+    <ImageView
+        android:id="@+id/iamgeview_login_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/all_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.07" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosans_bold"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text"
+        android:text="@string/app_name_english"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iamgeview_login_logo"
+        android:id="@+id/textview_login_appname"
+        />
+
+    <EditText
+        android:id="@+id/edittext_login_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/all_rounded_rectangle"
+        android:backgroundTint="@color/edittext_background"
+        android:hint="Email"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/hint_text_color"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintWidth_percent="0.7"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <org.sickprogrammer.storymusican.customview.CustomRoundButton
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:text="@string/login"
+        app:textColor="@color/white"
+        android:id="@+id/customroundbutton_login_login"
+        app:buttonColor="@color/login_button_color"
+        />
+
+
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
