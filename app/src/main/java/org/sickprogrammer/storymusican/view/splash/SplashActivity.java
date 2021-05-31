@@ -99,7 +99,7 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
 
             }
         });
-        revealAnimator.setDuration(800);
+        revealAnimator.setDuration(700);
         view.setVisibility(View.VISIBLE);
         revealAnimator.start();
     }
