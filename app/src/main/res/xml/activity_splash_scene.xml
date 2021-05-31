@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint android:id="@+id/widget" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/widget" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:duration="7000"
+        app:autoTransition="animateToEnd"
+        app:constraintSetStart="@+id/start" >
+        <KeyFrameSet >
+
+
+            <KeyAttribute
+                app:motionTarget="@+id/imageview_splash_image"
+                app:framePosition="0"
+                android:translationX="-30dp" />
+
+
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="0"
+                android:translationX="-350dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="4"
+                android:translationX="-315dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="8"
+                android:translationX="-255dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="12"
+                android:translationX="-175dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="16"
+                android:translationX="-95dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="20"
+                android:translationX="-35dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="32"
+                android:translationX="0dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment1"
+                app:framePosition="100"
+                android:translationX="5dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="0"
+                android:translationX="-350dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="2"
+                android:translationX="-350dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="6"
+                android:translationX="-315dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="10"
+                android:translationX="-255dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="14"
+                android:translationX="-175dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="18"
+                android:translationX="-95dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="22"
+                android:translationX="-35dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="34"
+                android:translationX="0dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment2"
+                app:framePosition="100"
+                android:translationX="5dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="0"
+                android:translationX="-350dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="4"
+                android:translationX="-350dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="8"
+                android:translationX="-315dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="12"
+                android:translationX="-255dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="16"
+                android:translationX="-175dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="20"
+                android:translationX="-95dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="24"
+                android:translationX="-35dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="36"
+                android:translationX="0dp"/>
+            <KeyAttribute
+                app:motionTarget="@+id/textview_splash_ment3"
+                app:framePosition="100"
+                android:translationX="5dp"/>
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

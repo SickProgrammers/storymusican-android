@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomRoundButton">
+        <attr name="text" format="reference|string"/>
+        <attr name="textColor" format="reference|integer"/>
+        <attr name="buttonColor" format="reference|integer"/>
+    </declare-styleable></resources>
