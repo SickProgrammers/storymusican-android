@@ -1,10 +1,14 @@
-package org.sickprogrammer.storymusican;
+package org.sickprogrammer.storymusican.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+
+import org.sickprogrammer.storymusican.R;
+import org.sickprogrammer.storymusican.register.RegisterActivity;
+import org.sickprogrammer.storymusican.utility.ScreenManager;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.View {
     Button registerButton;
@@ -27,6 +31,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
         registerButton.setOnClickListener(v -> {
             Intent goToRegisterIntent = new Intent(LoginActivity.this, RegisterActivity.class);
             startActivity(goToRegisterIntent);
+            overridePendingTransition(R.anim.all_slide_in, R.anim.all_slide_out);
+
         });
     }
 }
