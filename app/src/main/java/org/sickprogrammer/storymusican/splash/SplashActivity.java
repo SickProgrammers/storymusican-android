@@ -1,4 +1,4 @@
-package org.sickprogrammer.storymusican.view.splash;
+package org.sickprogrammer.storymusican.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,13 +11,12 @@ import android.view.ViewAnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.sickprogrammer.storymusican.BaseContract;
 import org.sickprogrammer.storymusican.R;
-import org.sickprogrammer.storymusican.presenter.BaseContract;
-import org.sickprogrammer.storymusican.view.login.LoginActivity;
-import org.sickprogrammer.storymusican.view.main.MainActivity;
+import org.sickprogrammer.storymusican.utility.ScreenManager;
+import org.sickprogrammer.storymusican.login.LoginActivity;
 
 public class SplashActivity extends AppCompatActivity implements BaseContract.View {
-    static final String TAG = SplashActivity.class.getSimpleName();
 
     ImageView imageViewSplashNote,imageViewSplashPencil;
     TextView textViewSplashAppName;
@@ -28,14 +27,9 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_temp);
-
+        ScreenManager.makeFullScreen(getWindow().getDecorView());
         initFindView();
-        imageViewSplashNote.post(new Runnable() {
-            @Override
-            public void run() {
-                startRevealAnimationFromTopLeft(imageViewSplashNote);
-            }
-        });
+        imageViewSplashNote.post(() -> startRevealAnimationFromTopLeft(imageViewSplashNote));
 
 
     }
@@ -77,13 +71,10 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
                    isAnimationAppNameComplete = true;
                }
                else {
-                   new Handler().postDelayed(new Runnable() {
-                       @Override
-                       public void run() {
-                           Intent intentGoToLoginActivity = new Intent(SplashActivity.this, LoginActivity.class);
-                           intentGoToLoginActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                           startActivity(intentGoToLoginActivity);
-                       }
+                   new Handler().postDelayed(() -> {
+                       Intent intentGoToLoginActivity = new Intent(SplashActivity.this, LoginActivity.class);
+                       intentGoToLoginActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                       startActivity(intentGoToLoginActivity);
                    },1500);
 
                }

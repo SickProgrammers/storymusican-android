@@ -1,6 +1,4 @@
-package org.sickprogrammer.storymusican.presenter.login;
-
-import org.sickprogrammer.storymusican.presenter.BaseContract;
+package org.sickprogrammer.storymusican;
 
 public interface LoginContract {
     interface View extends BaseContract.View{

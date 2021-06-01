@@ -1,4 +1,4 @@
-package org.sickprogrammer.storymusican.view.main;
+package org.sickprogrammer.storymusican;
 
 import androidx.appcompat.app.AppCompatActivity;
 

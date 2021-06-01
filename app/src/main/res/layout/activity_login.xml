@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/all_brightbackground_fullsize"
     app:layoutDescription="@xml/activity_login_scene"
-    tools:context=".view.login.LoginActivity">
+    tools:context=".login.LoginActivity">
 
     <ImageView
         android:id="@+id/iamgeview_login_logo"
@@ -29,7 +29,7 @@
         android:fontFamily="@font/notosans_bold"
         android:text="@string/app_name_english"
         android:textColor="@color/white"
-        android:textSize="@dimen/title_text"
+        android:textSize="@dimen/title_all_titletext_28sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iamgeview_login_logo" />
@@ -41,7 +41,7 @@
         android:autofillHints="emailAddress"
         android:background="@drawable/all_rounded_rectangle"
         android:backgroundTint="@color/edittext_background"
-        android:hint="@string/email"
+        android:hint="@string/all_email"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -64,7 +64,7 @@
         android:autofillHints="emailAddress"
         android:background="@drawable/all_rounded_rectangle"
         android:backgroundTint="@color/edittext_background"
-        android:hint="@string/password"
+        android:hint="@string/all_password"
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -79,7 +79,18 @@
         app:layout_constraintWidth_percent="0.7"
         tools:ignore="TouchTargetSizeCheck"
         tools:targetApi="o" />
-
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/all_visibility"
+        android:background="@null"
+        android:contentDescription="@string/all_password_visibility"
+        app:layout_constraintTop_toTopOf="@id/edittext_login_password"
+        app:layout_constraintBottom_toBottomOf="@id/edittext_login_password"
+        app:layout_constraintRight_toRightOf="@id/edittext_login_password"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/imagebutton_login_password_visibility"
+        />
     <org.sickprogrammer.storymusican.customview.CustomRoundButton
         android:id="@+id/customroundbutton_login_login"
         android:layout_width="0dp"
@@ -91,7 +102,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.72"
         app:layout_constraintWidth_percent="0.7"
-        app:text="@string/login"
+        app:text="@string/all_login"
         app:textColor="@color/white" />
 
     <Button
@@ -101,9 +112,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/scdream4"
-        android:text="@string/register"
+        android:text="@string/all_register"
         android:textColor="@color/white"
-        android:textSize="@dimen/borderless_button_text"
+        android:textSize="@dimen/buttonbody_all_borderless_16sp"
         app:layout_constraintLeft_toLeftOf="@id/customroundbutton_login_login"
         app:layout_constraintRight_toRightOf="@id/customroundbutton_login_login"
         app:layout_constraintTop_toBottomOf="@id/customroundbutton_login_login" />
@@ -114,7 +125,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@null"
-        android:contentDescription="@string/login_with_kakaotalk"
+        android:contentDescription="@string/login_login_with_kakaotalk"
         android:src="@drawable/login_kakaotalk_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
@@ -126,7 +137,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/scdream4"
         android:gravity="center"
-        android:text="@string/login_with_kakaotalk"
+        android:text="@string/login_login_with_kakaotalk"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="@id/imagebutton_login_kakaotalk_register"
@@ -139,7 +150,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"
-        android:contentDescription="@string/login_with_google"
+        android:contentDescription="@string/login_login_with_google"
         android:src="@drawable/login_google_register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -151,7 +162,7 @@
         android:layout_marginTop="8dp"
         android:fontFamily="@font/scdream4"
         android:gravity="center"
-        android:text="@string/login_with_google"
+        android:text="@string/login_login_with_google"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="@id/imagebutton_login_google_register"

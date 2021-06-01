@@ -180,6 +180,14 @@
             app:layout_constraintLeft_toLeftOf="@id/imagebutton_login_google_register"
             app:layout_constraintRight_toRightOf="@id/imagebutton_login_google_register"
             android:layout_marginTop="8dp" />
+        <Constraint
+            android:id="@+id/imagebutton_login_password_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/edittext_login_password"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintRight_toRightOf="@id/edittext_login_password"
+            app:layout_constraintTop_toTopOf="@id/edittext_login_password" />
     </ConstraintSet>
 
     <Transition
@@ -293,6 +301,22 @@
                 app:motionTarget="@+id/imagebutton_login_google_register"
                 app:framePosition="0"
                 android:translationY="150dp" />
+            <KeyAttribute
+                app:motionTarget="@+id/imagebutton_login_password_visibility"
+                app:framePosition="0"
+                android:scaleX="3" />
+            <KeyAttribute
+                app:motionTarget="@+id/imagebutton_login_password_visibility"
+                app:framePosition="0"
+                android:scaleY="3" />
+            <KeyAttribute
+                app:motionTarget="@+id/imagebutton_login_password_visibility"
+                app:framePosition="0"
+                android:translationY="60dp" />
+            <KeyAttribute
+                app:motionTarget="@+id/imagebutton_login_password_visibility"
+                app:framePosition="0"
+                android:translationX="120dp" />
 
         </KeyFrameSet>
     </Transition>

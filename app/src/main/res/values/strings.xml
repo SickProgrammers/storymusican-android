@@ -1,10 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">스토리 뮤지션</string>
     <string name="app_name_english">Story Musician</string>
-    <string name="login">로그인</string>
-    <string name="register">회원가입</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login_with_google">구글\n로그인</string>
-    <string name="login_with_kakaotalk">카카오톡\n로그인</string>
+    <string name="all_login">로그인</string>
+    <string name="all_register">회원가입</string>
+    <string name="all_email">Email</string>
+    <string name="all_password">Password</string>
+    <string name="login_login_with_google">구글\n로그인</string>
+    <string name="login_login_with_kakaotalk">카카오톡\n로그인</string>
+    <string name="all_next">다음</string>
+    <string name="all_gotoback">뒤로가기</string>를
+    <string name="register_input_email">이메일을 입력하세요</string>
+    <string name="register_input_password">비밀번호 입력하세요</string>
+    <string name="register_complete_register">작곡 준비 완료!</string>
+    <string name="all_password_visibility">비밀번호 보기</string>
 </resources>

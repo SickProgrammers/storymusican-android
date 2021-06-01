@@ -2,7 +2,6 @@ package org.sickprogrammer.storymusican.customview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.graphics.drawable.DrawableCompat;
 
 import org.sickprogrammer.storymusican.R;
+import org.sickprogrammer.storymusican.utility.DrawableManager;
 
+/**
+ * 커스텀 라운드 버튼
+ *
+ */
 public class CustomRoundButton extends ConstraintLayout {
 
     View background;
@@ -63,10 +66,7 @@ public class CustomRoundButton extends ConstraintLayout {
         int buttonColor = typedArray.getColor(R.styleable.CustomRoundButton_buttonColor,0);
         int textColor = typedArray.getColor(R.styleable.CustomRoundButton_textColor,0);
 
-        Drawable buttonDrawable = background.getBackground();
-        buttonDrawable = DrawableCompat.wrap(buttonDrawable);
-        DrawableCompat.setTint(buttonDrawable,buttonColor);
-        background.setBackground(buttonDrawable);
+        DrawableManager.setBackgroundTint(background,buttonColor);
         buttonText.setText(text);
         buttonText.setTextColor(textColor);
     }
