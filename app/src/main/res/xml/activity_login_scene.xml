@@ -182,12 +182,13 @@
             android:layout_marginTop="8dp" />
         <Constraint
             android:id="@+id/imagebutton_login_password_visibility"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="@id/edittext_login_password"
             android:layout_marginEnd="16dp"
             app:layout_constraintRight_toRightOf="@id/edittext_login_password"
-            app:layout_constraintTop_toTopOf="@id/edittext_login_password" />
+            app:layout_constraintTop_toTopOf="@id/edittext_login_password"
+            app:layout_constraintDimensionRatio="1:1" />
     </ConstraintSet>
 
     <Transition

@@ -45,6 +45,7 @@
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/hint_text_color"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,6 +69,7 @@
         android:inputType="textPassword"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
+        android:textColor="@color/black"
         android:textColorHint="@color/hint_text_color"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -79,18 +81,20 @@
         app:layout_constraintWidth_percent="0.7"
         tools:ignore="TouchTargetSizeCheck"
         tools:targetApi="o" />
+
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/all_visibility"
+        android:id="@+id/imagebutton_login_password_visibility"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
         android:background="@null"
         android:contentDescription="@string/all_password_visibility"
-        app:layout_constraintTop_toTopOf="@id/edittext_login_password"
+        android:src="@drawable/all_visibility"
         app:layout_constraintBottom_toBottomOf="@id/edittext_login_password"
+        app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintRight_toRightOf="@id/edittext_login_password"
-        android:layout_marginEnd="16dp"
-        android:id="@+id/imagebutton_login_password_visibility"
-        />
+        app:layout_constraintTop_toTopOf="@id/edittext_login_password" />
+
     <org.sickprogrammer.storymusican.customview.CustomRoundButton
         android:id="@+id/customroundbutton_login_login"
         android:layout_width="0dp"

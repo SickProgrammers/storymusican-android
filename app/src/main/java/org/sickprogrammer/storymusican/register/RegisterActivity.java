@@ -1,6 +1,7 @@
 package org.sickprogrammer.storymusican.register;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -70,13 +71,23 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     //TODO:모든 유저 정보 입력이 끝난 경우 회원가입 시도 후 성공 시 회원가입 완료 프래그먼트로 이동해야함
     @Override
     public void moveToNextFragment() {
+        //입력할 정보가 더 남아있는 경우 다음 프래그먼트로 이동한다
         if(currentIndex<registerInfoFragments.size()-1){
             FragmentTransaction registerInfoFragmentTransaction = registerInfoFragmentManager.beginTransaction();
             registerInfoFragmentTransaction.setCustomAnimations(R.anim.all_slide_in,R.anim.all_slide_out);
             registerInfoFragmentTransaction.replace(registerInfoFragmentContainer.getId(),registerInfoFragments.get(++currentIndex));
             registerInfoFragmentTransaction.commit();
         }
+        //회원가입 정보 입력이 완료되고 성공한 경우, 완료 화면으로 이동한다.
+        else{
+            imageButtonBack.setVisibility(View.INVISIBLE);
+            customRoundButtonNext.setVisibility(View.INVISIBLE);
+            FragmentTransaction registerInfoFragmentTransaction = registerInfoFragmentManager.beginTransaction();
+            registerInfoFragmentTransaction.setCustomAnimations(R.anim.all_slide_in,R.anim.all_slide_out);
+            registerInfoFragmentTransaction.replace(registerInfoFragmentContainer.getId(),new RegisterCompleteFragment());
+            registerInfoFragmentTransaction.commit();
 
+        }
     }
 
     @Override

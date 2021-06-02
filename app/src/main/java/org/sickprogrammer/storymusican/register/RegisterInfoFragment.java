@@ -6,6 +6,8 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import android.text.InputType;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +28,8 @@ public class RegisterInfoFragment extends Fragment implements RegisterFragmentCo
     TextView textViewTitle;
     EditText editTextRegisterInfo;
     ImageButton imageButtonPasswordVisibility;
+    boolean isPasswordShown = false;
+
     /**
      * 현재 프래그먼트가 무슨 회원가입 정보를 입력 받는 중인지 나타내는 타입
      */
@@ -71,16 +75,13 @@ public class RegisterInfoFragment extends Fragment implements RegisterFragmentCo
         비밀번호 보기 여부를 토글하고,
         비밀번호 보기설정 이미지 버튼의 색상을 변경한다.
          */
-        //TODO:비밀번호 보기 설정을 토글할 경우 해당 의도에 맞게 동작하게 구현해야함
-        imageButtonPasswordVisibility.setOnClickListener(v->{
-            if(editTextRegisterInfo.getInputType()==InputType.TYPE_TEXT_VARIATION_PASSWORD){
-                DrawableManager.setImageTint(imageButtonPasswordVisibility, Color.BLACK);
-                editTextRegisterInfo.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
-            }
-            else{
+        imageButtonPasswordVisibility.setOnClickListener(v -> {
+            if (isPasswordShown) {
                 DrawableManager.setImageTint(imageButtonPasswordVisibility, requireActivity().getColor(R.color.all_Disabled_color));
-                editTextRegisterInfo.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            } else {
+                DrawableManager.setImageTint(imageButtonPasswordVisibility, requireActivity().getColor(R.color.black));
             }
+            isPasswordShown = togglePassWordVisibility(isPasswordShown, editTextRegisterInfo);
         });
     }
 
@@ -108,8 +109,29 @@ public class RegisterInfoFragment extends Fragment implements RegisterFragmentCo
                 textViewTitle.setText(getString(R.string.register_input_password));
                 editTextRegisterInfo.setHint(getString(R.string.all_password));
                 editTextRegisterInfo.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                editTextRegisterInfo.setTransformationMethod(PasswordTransformationMethod.getInstance());
                 imageButtonPasswordVisibility.setVisibility(View.VISIBLE);
                 break;
         }
+    }
+
+    /**
+     * 비밀번호 보기를 토글하는 함수
+     *
+     * @param isShown 현재 비밀번호의 보기여부
+     * @return 토글된 비밀번호 보기여부
+     */
+    @Override
+    public boolean togglePassWordVisibility(boolean isShown, EditText setTo) {
+
+        // 현재 비밀번호가 보이는 경우
+        if (isShown) {
+            setTo.setTransformationMethod(PasswordTransformationMethod.getInstance());
+        }
+        // 현재 비밀번호가 보이지 않는 경우
+        else {
+            setTo.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+        }
+        return !isShown;
     }
 }

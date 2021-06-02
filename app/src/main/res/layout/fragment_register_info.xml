@@ -32,6 +32,8 @@
         android:hint="@string/all_password"
         android:textColor="@color/black"
         android:inputType="textPassword"
+        android:maxLines="1"
+        android:maxLength="25"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:textColorHint="@color/hint_text_color"
@@ -46,18 +48,18 @@
         tools:targetApi="o" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/all_visibility"
         android:background="@null"
-        android:tint="@color/all_Disabled_color"
-        android:visibility="invisible"
+        app:layout_constraintDimensionRatio="1:1"
+        android:visibility="visible"
         android:contentDescription="@string/all_password_visibility"
         app:layout_constraintTop_toTopOf="@id/edittext_register_info"
         app:layout_constraintBottom_toBottomOf="@id/edittext_register_info"
         app:layout_constraintRight_toRightOf="@id/edittext_register_info"
         android:layout_marginEnd="16dp"
         android:id="@+id/imagebutton_register_password_visibility"
-        />
+        app:tint="@color/all_Disabled_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
