@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/all_brightbackground_fullsize"
-    tools:context=".view.main.MainActivity"
+    tools:context=".MainActivity"
     >
 
     <TextView

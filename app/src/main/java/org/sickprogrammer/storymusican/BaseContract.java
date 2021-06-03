@@ -1,4 +1,6 @@
-package org.sickprogrammer.storymusican.presenter;
+package org.sickprogrammer.storymusican;
+
+import android.view.View;
 
 public class BaseContract {
     public interface View {
@@ -20,5 +22,16 @@ public class BaseContract {
          */
         void setView(T view);
         void releaseView();
+    }
+    public interface FragmentView {
+        /**
+         * 액티비티 실행 시 레이아웃 요소들 findViewById
+         */
+        void initFindView(android.view.View view);
+
+        /**
+         * 액티비티 실행 시 레이아웃 요소들에 대한 클릭 리스너 설정
+         */
+        void initClickListener();
     }
 }
