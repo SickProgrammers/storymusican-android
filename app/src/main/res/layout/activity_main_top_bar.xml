@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cons_main_top_bar_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.107"
+        android:src="@drawable/all_logo"
+        android:scaleType="centerInside"
+        android:id="@+id/imageview_main_logo"
+        app:layout_constraintDimensionRatio="1:0.78"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="12dp"
+        android:padding="2dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/app_name_english" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name_english"
+        android:gravity="center"
+        android:id="@+id/textview_main_app_name"
+        app:layout_constraintTop_toTopOf="@id/imageview_main_logo"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_main_logo"
+        app:layout_constraintLeft_toRightOf="@id/imageview_main_logo"
+        android:layout_marginStart="4dp"
+        android:includeFontPadding="false"
+        android:fontFamily="@font/notosans_bold"
+        android:textSize="@dimen/buttonbody_all_bodytext_18sp"
+        android:textColor="@color/white"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        app:layout_constraintDimensionRatio="1:1"
+        android:contentDescription="@string/all_setting"
+        android:scaleType="fitXY"
+        app:layout_constraintLeft_toRightOf="@id/textview_main_app_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageview_main_logo"
+        app:layout_constraintBottom_toBottomOf="@id/imageview_main_logo"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagebutton_main_setting"
+        android:src="@drawable/all_gear"
+        android:background="@null"
+        app:tint="@color/white" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/bottom_navigation_search"
+        android:src="@drawable/all_magnifying_glass"
+        app:layout_constraintTop_toTopOf="@id/imagebutton_main_setting"
+        app:layout_constraintLeft_toRightOf="@id/imagebutton_main_setting"
+        android:id="@+id/imagebutton_main_search"
+        android:padding="1.5dp"
+        android:scaleType="centerInside"
+        app:layout_constraintRight_toLeftOf="@id/circleimageview_main_profile"
+        app:layout_constraintBottom_toBottomOf="@id/imagebutton_main_setting"
+        android:background="@null"
+        app:tint="@color/white" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:contentDescription="@string/all_profile"
+        android:padding="1.5dp"
+        android:id="@+id/circleimageview_main_profile"
+        app:layout_constraintLeft_toRightOf="@id/imagebutton_main_search"
+        app:layout_constraintTop_toTopOf="@id/imagebutton_main_setting"
+        app:layout_constraintBottom_toBottomOf="@id/imagebutton_main_setting"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/all_magnifying_glass"
+        app:tint="@color/white"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

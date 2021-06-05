@@ -4,4 +4,10 @@
         <attr name="text" format="reference|string"/>
         <attr name="textColor" format="reference|integer"/>
         <attr name="buttonColor" format="reference|integer"/>
-    </declare-styleable></resources>
+    </declare-styleable>
+    <declare-styleable name="CustomBottomNavigationItem">
+        <attr name="src" format="reference|integer"/>
+        <attr name="text_bottom_navigation" format="reference|string"/>
+    </declare-styleable>
+</resources>
+

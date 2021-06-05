@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/cons_set_main_start">
+        <Constraint
+            android:id="@+id/framelayout_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view_main"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_top_bar" />
+        <Constraint
+            android:id="@+id/layout_main_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/bottom_navigation_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.107" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/cons_set_main_end">
+        <Constraint
+            android:id="@+id/framelayout_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view_main"
+            app:layout_constraintTop_toBottomOf="@id/layout_main_top_bar" />
+        <Constraint
+            android:id="@+id/layout_main_top_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/bottom_navigation_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.107" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/cons_set_main_end"
+        app:constraintSetStart="@+id/cons_set_main_start"
+        app:autoTransition="animateToEnd"
+        />
+</MotionScene>
