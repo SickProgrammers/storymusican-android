@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/bottom_navigation_recommededlist" android:icon="@drawable/bottom_navigaion_recommended_list"/>
+    <item android:title="@string/bottom_navigation_search" android:icon="@drawable/bottom_navigation_search"/>
+    <item android:title="@string/bottom_navigation_playlist" android:icon="@drawable/bottom_navigation_playlist"/>
+</menu>

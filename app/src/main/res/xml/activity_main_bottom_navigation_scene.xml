@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/cons_set_main_bottom_navigation_start">
+        <Constraint android:id="@+id/widget" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/cons_set_main_bottom_navigation_end">
+        <Constraint android:id="@id/widget" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@id/cons_set_main_bottom_navigation_end"
+        app:constraintSetStart="@+id/cons_set_main_bottom_navigation_start" />
+</MotionScene>
