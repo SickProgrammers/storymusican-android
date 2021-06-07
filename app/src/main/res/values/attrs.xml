@@ -5,9 +5,11 @@
         <attr name="textColor" format="reference|integer"/>
         <attr name="buttonColor" format="reference|integer"/>
     </declare-styleable>
-    <declare-styleable name="CustomBottomNavigationItem">
-        <attr name="src" format="reference|integer"/>
-        <attr name="text_bottom_navigation" format="reference|string"/>
+
+    <declare-styleable name="CustomSettingComponentView">
+        <attr name="android:src"/>
+        <attr name="optionVisibility" format="reference|boolean"/>
+        <attr name="text_setting_component" format="reference|string"/>
     </declare-styleable>
 </resources>
 
