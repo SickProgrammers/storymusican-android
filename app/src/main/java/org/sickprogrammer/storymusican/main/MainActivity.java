@@ -7,10 +7,8 @@ import org.sickprogrammer.storymusican.utility.ScreenManager;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageButton;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import nl.joery.animatedbottombar.AnimatedBottomBar;
 
@@ -38,8 +36,10 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         imageButtonSetting.setOnClickListener(v->{
             Intent intentGoToSettingActivity = new Intent(MainActivity.this, SettingActivity.class);
             startActivity(intentGoToSettingActivity);
-            overridePendingTransition(R.anim.all_slide_up,R.anim.all_slide_down);
+            overridePendingTransition(R.anim.all_slide_to_top,R.anim.all_stay);
         });
+
+
     }
 
 

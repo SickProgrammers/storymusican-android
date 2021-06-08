@@ -87,6 +87,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Vi
                                 Intent intentGoToMain = new Intent(LoginActivity.this, MainActivity.class);
                                 intentGoToMain.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                                 startActivity(intentGoToMain);
+                                finish();
                             }
 
                             @Override
