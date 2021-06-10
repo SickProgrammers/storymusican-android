@@ -22,11 +22,13 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
     TextView textViewSplashAppName;
     boolean isAnimationPencilComplete = false;
     boolean isAnimationAppNameComplete = false;
+    int ACTIVITY_START_DELAY=0;
+    int REVEAL_ANIMATION_DURATION =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_temp);
+        setContentView(R.layout.activity_splash);
         ScreenManager.makeFullScreen(getWindow().getDecorView());
         initFindView();
         imageViewSplashNote.post(() -> startRevealAnimationFromTopLeft(imageViewSplashNote));
@@ -75,7 +77,8 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
                        Intent intentGoToLoginActivity = new Intent(SplashActivity.this, LoginActivity.class);
                        intentGoToLoginActivity.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                        startActivity(intentGoToLoginActivity);
-                   },1500);
+                       finish();
+                   },ACTIVITY_START_DELAY);
 
                }
             }
@@ -90,7 +93,7 @@ public class SplashActivity extends AppCompatActivity implements BaseContract.Vi
 
             }
         });
-        revealAnimator.setDuration(700);
+        revealAnimator.setDuration(REVEAL_ANIMATION_DURATION);
         view.setVisibility(View.VISIBLE);
         revealAnimator.start();
     }
